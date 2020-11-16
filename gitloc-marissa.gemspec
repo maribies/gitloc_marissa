@@ -8,4 +8,5 @@ Gem::Specification.new do |s|
   s.email       = 'marissa.biesecker@gmail.com'
   s.files       = Dir["**/*"].select { |f| File.file? f }
   s.homepage    = 'https://github.com/JoshCheek/elective-building-a-gem'
+  s.executables << 'gitloc'
 end
