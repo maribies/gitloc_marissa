@@ -1,5 +1,6 @@
 require 'tmpdir'
 require 'open3'
+require 'gitloc_marissa/version'
 
 class GitlocMarissa
   def self.call(argv, outstream, errstream)
