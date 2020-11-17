@@ -12,11 +12,12 @@ class GitlocMarissa
 
         raise RepoDoesNotExistError, repo unless status.success?
 
-        Dir.chdir 'cloned'
-        files = Dir['**/*'].reject { |name| File.directory? name }
-        files.map do |file|
-          body = File.read(file)
-          [file, body]
+        Dir.chdir 'cloned' do
+          files = Dir['**/*'].reject { |name| File.directory? name }
+          files.map do |file|
+            body = File.read(file)
+            [file, body]
+          end
         end
       end
     end
